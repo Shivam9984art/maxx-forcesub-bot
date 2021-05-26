@@ -17,7 +17,7 @@ def onButtonPress(client, cb):
      client.get_chat_member(CHANNEL_USERNAME, user_id)
      client.unban_chat_member(chat_id, user_id)
    except pyrogram.errors.exceptions.bad_request_400.UserNotParticipant:
-     client.answer_callback_query(cb.id, text="Join the channel and press the button again.")
+     client.answer_callback_query(cb.id, text="Join My Channel First Then Click Here Nigga")
 
 
 @app.on_message(Filters.text & ~Filters.private, group=1)
@@ -43,9 +43,9 @@ def SendMsg(client, message):
     )
     client.restrict_chat_member(message.chat.id, user_id, ChatPermissions(can_send_messages=False))
   except pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired:
-    client.send_message(message.chat.id, text=f"I am not an admin in @{CHANNEL_USERNAME}")
+    client.send_message(message.chat.id, text=f"I am not an Admin Bc @{CHANNEL_USERNAME}")
   except ValueError:
-    client.send_message(message.chat.id, text=f"I am not an admin in @{CHANNEL_USERNAME}")
+    client.send_message(message.chat.id, text=f"I am not an Admin Bc @{CHANNEL_USERNAME}")
 
 
 @app.on_message(Filters.command(["forcesubscribe"]) & ~Filters.private)
@@ -58,10 +58,10 @@ def config(client, message):
       input_str = input_str.replace("@", "")
     except IndexError:
       if sql.fs_settings(chat_id):
-        message.reply_text(f"Force Subscribe is **enabled** in this chat.\nChannel - @{sql.fs_settings(chat_id).channel}")
+        message.reply_text(f"Force Subscribe is **enabled** in this chat nigga so subscribe.\nChannel - @{sql.fs_settings(chat_id).channel}")
         return
       else:
-        message.reply_text("Force Subscribe is **disabled** in this chat.")
+        message.reply_text("Force Subscribe is **disabled** in this chat sed.")
         return
     if input_str.lower() in ("off", "no", "disable"):
       sql.disapprove(chat_id)
