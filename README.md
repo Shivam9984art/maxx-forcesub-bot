@@ -1,6 +1,6 @@
 # Introduction
 **A Telegram Bot to force users to join a specific channel before sending messages in a group.**
-- Find it on Telegram as [MaxxBots](https://t.me/MaxxBots)
+- Find it on Telegram as [RadiumChat](https://t.me/radiumchat)
 
 ## Todo
 - [ ] Add multiple channels support
