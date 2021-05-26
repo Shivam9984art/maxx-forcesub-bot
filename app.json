@@ -1,5 +1,5 @@
 {
-  "name": "maxx-forcesub-bot",
+  "name": "forcesub-bot",
   "description": "This is a telegram bot writen in python for managing group/channel.",
   "keywords": [
     "telegram",
